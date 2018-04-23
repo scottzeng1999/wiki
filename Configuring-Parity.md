@@ -168,6 +168,14 @@ log_file = "/var/log/parity.log"
 color = true
 ```
 
+## Presets
+Parity can be launched with a [preset configuration file](https://github.com/paritytech/parity/tree/1d9542fe88044d0831471510beb23626050f1bbf/parity/cli/presets) using `--config` flags. Preset can be one of the following:
+- `dev`: uses [dev chain specification](https://wiki.parity.io/Private-development-chain.html) with [Instant-seal](https://wiki.parity.io/Pluggable-Consensus.html#instant-seal) consensus engine.
+- `dev-insecure`: uses the same configuration as `dev`, plus allows all RPC APIs and accepts all RPC interfaces and hosts. 
+- `insecure`: uses the Mainnet default configuration, plus the flag `no_consensus`, allows all RPC APIs and accepts all RPC interfaces and hosts.
+- `mining`:
+- `non-standard-ports`:
+
 
 ## CLI Options
 ```bash

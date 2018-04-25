@@ -169,11 +169,11 @@ color = true
 ```
 
 ## Presets
-Parity can be launched with a [preset configuration file](https://github.com/paritytech/parity/tree/1d9542fe88044d0831471510beb23626050f1bbf/parity/cli/presets) using `--config` flags. Preset can be one of the following:
-- `dev`: uses [dev chain specification](https://wiki.parity.io/Private-development-chain.html) with [Instant-seal](https://wiki.parity.io/Pluggable-Consensus.html#instant-seal) consensus engine. The gas price is set to 0.
-- `dev-insecure`: uses the same configuration as `dev`, plus allows all RPC APIs and accepts all RPC interfaces and hosts, as well as all IPFS hosts. 
-- `insecure`: uses the Mainnet default configuration, plus the flag `no_consensus`, allows all RPC APIs and accepts all RPC interfaces and hosts, as well as all IPFS hosts. 
-- `mining`: uses the Mainnet default configuration, plus increases the amount of peers to >50 and <100, disable the Dapps and IPC interface. It forces the sealing of blocks with a minimum of 4 s interval, forces the reseal for any new transaction (external or local), reduces the transaction queue size to 2048 while increasing the cache size to 256 MB and sets the trace logging level for the miner and own_tx modules.
+Parity can be launched with a [preset configuration file](https://github.com/paritytech/parity/tree/1d9542fe88044d0831471510beb23626050f1bbf/parity/cli/presets) using `--config` flag with one of the following value:
+- `dev`: uses [dev chain specifications](https://wiki.parity.io/Private-development-chain.html) with [Instant-seal](https://wiki.parity.io/Pluggable-Consensus.html#instant-seal) consensus engine. The gas price is set to 0.
+- `dev-insecure`: uses the same configuration as `dev`, plus sets the flag `no_consensus`, allows all RPC APIs and accepts all RPC interfaces and hosts, as well as all IPFS hosts. 
+- `insecure`: uses the Mainnet default configuration, plus sets the flag `no_consensus`, allows all RPC APIs and accepts all RPC interfaces and hosts, as well as all IPFS hosts. 
+- `mining`: uses the Mainnet default configuration, plus increases the number of peers to min 50 and max 100, it disables the Dapps and IPC interface. It forces the sealing of blocks with a minimum of 4 seconds interval, forces the reseal for any new transaction (external or local), reduces the transaction queue size to 2048 while increasing the cache size to 256 MB and setting the `trace` logging level for the `miner` and `own_tx` modules.
 - `non-standard-ports`: sets the client to listen to the port 30305 and 8645 for RPC connections.
 
 ## CLI Options
